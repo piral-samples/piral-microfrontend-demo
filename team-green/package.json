@@ -6,14 +6,14 @@
     "pilet"
   ],
   "devDependencies": {
+    "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/react-router": "latest",
     "@types/react-router-dom": "latest",
-    "@types/node": "latest",
     "app-shell": "file:../app-shell/app-shell-1.0.0.tgz",
     "piral-cli": "^0.6.0-pre.543",
-    "typescript": "latest"
+    "typescript": "^3.5.3"
   },
   "peerDependencies": {
     "@dbeining/react-atom": "*",

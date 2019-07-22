@@ -1,11 +1,17 @@
 #!/bin/bash
 
-declare -a projects=("app-shell" "team-blue" "team-green" "team-red")
+declare -a pilets=("team-blue" "team-green" "team-red")
 
-for project in "${projects[@]}";
+cd app-shell
+npm i
+npm run build
+npm pack
+cd ..
+
+for pilet in "${pilets[@]}";
 do
-    echo ${project};
-    cd ${project};
-    npm i;
+    echo ${pilet};
+    cd ${pilet};
+    npm i ../app-shell/app-shell-1.0.0.tgz;
     cd ..
 done
