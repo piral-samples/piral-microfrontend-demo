@@ -1,6 +1,7 @@
 # Exclude compiled files
 dist
 lib
+sample-pilet-service
 
 # OS files
 .DS_STORE
