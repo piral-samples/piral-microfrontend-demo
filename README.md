@@ -43,3 +43,11 @@ Now open another shell and publish the pilets:
 ```
 
 The upload assumes that the pilet feed service is running at `http://localhost:9000/api/v1/pilet`. The used API Key is one of the standard ones. If these assumptions are not correct you'll need to correct the settings.
+
+For simplicity, you can also just use the following command (required: `install.sh` must have been run):
+
+```sh
+./run.sh
+```
+
+This will clone, install, build, and run a sample feed service. Additionally, everything else will be build, published, and started.

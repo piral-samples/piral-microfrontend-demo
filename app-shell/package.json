@@ -6,7 +6,7 @@
     "piral"
   ],
   "dependencies": {
-    "piral": "^0.6.0-pre.543"
+    "piral": "^0.6.0"
   },
   "scripts": {
     "start": "piral debug",
@@ -24,13 +24,13 @@
     "scripts": {}
   },
   "devDependencies": {
-    "typescript": "latest",
+    "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/react-router": "latest",
     "@types/react-router-dom": "latest",
-    "@types/node": "latest",
-    "piral-cli": "latest"
+    "piral-cli": "^0.6.0",
+    "typescript": "latest"
   },
   "typings": "lib/index.d.ts"
 }

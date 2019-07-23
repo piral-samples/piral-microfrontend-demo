@@ -12,7 +12,7 @@
     "@types/react-router": "latest",
     "@types/react-router-dom": "latest",
     "app-shell": "file:../app-shell/app-shell-1.0.0.tgz",
-    "piral-cli": "^0.6.0-pre.543",
+    "piral-cli": "^0.6.0",
     "typescript": "^3.5.3"
   },
   "peerDependencies": {
