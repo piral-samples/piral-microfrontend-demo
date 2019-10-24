@@ -3,6 +3,8 @@
 declare -a pilets=("team-blue" "team-green" "team-red")
 
 cd app-shell
+rm -rf node_modules
+rm -f package-lock.json
 npm i
 npm run build
 npm pack
@@ -12,6 +14,8 @@ for pilet in "${pilets[@]}";
 do
     echo ${pilet};
     cd ${pilet};
-    npm i ../app-shell/app-shell-1.0.0.tgz;
+    rm -rf node_modules
+    rm -f package-lock.json
+    npm i
     cd ..
 done

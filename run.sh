@@ -2,12 +2,14 @@
 
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
-if [ ! -d "$dldir" ]; then
-    git clone https://github.com/smapiot/sample-pilet-service.git ;
-    cd sample-pilet-service ;
+dldir=sample-pilet-service
+
+if [ ! -d "${dldir}" ]; then
+    git clone https://github.com/smapiot/${dldir}.git ;
+    cd ${dldir} ;
     npm i && npm run build ;
 else
-    cd sample-pilet-service ;
+    cd ${dldir} ;
 fi
 
 npm start &
