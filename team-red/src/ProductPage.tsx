@@ -1,17 +1,20 @@
 import * as React from 'react';
-import { useExtension } from 'app-shell';
 import { History } from 'history';
 import { product } from './product';
 
 export interface ProductPageProps {
   name: string;
   history: History;
+  BuyButton: React.ComponentType<{
+    item: string;
+  }>;
+  Recommendations: React.ComponentType<{
+    item: string;
+  }>;
+  BasketInfo: React.ComponentType;
 }
 
-export const ProductPage: React.FC<ProductPageProps> = ({ name, history }) => {
-  const BasketInfo = useExtension('basket-info');
-  const BuyButton = useExtension('buy-button');
-  const Recommendations = useExtension('recommendations');
+export const ProductPage: React.FC<ProductPageProps> = ({ name, history, BasketInfo, BuyButton, Recommendations }) => {
   const [variant] = product.variants.filter(v => name === v.sku);
 
   return (
@@ -38,8 +41,8 @@ export const ProductPage: React.FC<ProductPageProps> = ({ name, history }) => {
             </button>
           ))}
         </div>
-        <BuyButton params={{ item: variant.sku }} />
-        <Recommendations params={{ item: variant.sku }} />
+        <BuyButton item={variant.sku} />
+        <Recommendations item={variant.sku} />
       </>
     )
   );
