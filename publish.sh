@@ -7,5 +7,6 @@ do
     echo ${pilet};
     cd ${pilet};
     npm run upload;
+    rm *.tgz
     cd ..
 done
