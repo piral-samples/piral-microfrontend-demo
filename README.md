@@ -2,6 +2,8 @@
 
 A demo for a webshop product page using microfrontends with Piral. :rocket:
 
+**[View the demo online!](https://mife-demo.florian-rappl.de/products)**
+
 ## Prerequisites
 
 For running the code you'll need Node.js with NPM. Nothing else is required.
