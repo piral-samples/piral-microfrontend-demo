@@ -6,12 +6,12 @@
     "piral"
   ],
   "dependencies": {
-    "piral": "0.8.3",
-    "piral-containers": "0.8.3"
+    "piral": "0.11.3",
+    "piral-containers": "0.11.3"
   },
   "scripts": {
     "start": "piral debug",
-    "build": "piral build && tsc"
+    "build": "piral build"
   },
   "app": "./src/index.html",
   "main": "lib/index.js",
@@ -30,7 +30,7 @@
     "@types/react-dom": "latest",
     "@types/react-router": "latest",
     "@types/react-router-dom": "latest",
-    "piral-cli": "0.8.3",
+    "piral-cli": "0.11.3",
     "typescript": "latest"
   },
   "typings": "lib/index.d.ts"

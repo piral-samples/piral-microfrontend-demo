@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render } from 'react-dom';
 import { Redirect } from 'react-router-dom';
 import { createPiral, Piral, SetRoute } from 'piral';
-import { createContainerApi } from 'piral-containers';
+import { createContainersApi } from 'piral-containers';
 
 const piral = createPiral({
   requestPilets() {
@@ -10,10 +10,8 @@ const piral = createPiral({
       .then(res => res.json())
       .then(res => res.items);
   },
-  extendApi: [createContainerApi()],
+  extendApi: [createContainersApi()],
 });
-
-console.log(piral.root);
 
 const app = (
   <Piral instance={piral}>
@@ -22,5 +20,3 @@ const app = (
 );
 
 render(app, document.querySelector('#app'));
-
-export * from 'piral';

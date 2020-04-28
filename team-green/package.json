@@ -11,8 +11,8 @@
     "@types/react-dom": "latest",
     "@types/react-router": "latest",
     "@types/react-router-dom": "latest",
-    "app-shell": "file:../app-shell/app-shell-1.0.0.tgz",
-    "piral-cli": "0.8.3",
+    "app-shell": "file:../app-shell/dist/develop/app-shell-1.0.0.tgz",
+    "piral-cli": "0.11.3",
     "typescript": "latest"
   },
   "peerDependencies": {
@@ -36,7 +36,7 @@
   "piral": {
     "comment": "Keep this section to allow running `piral upgrade`.",
     "name": "app-shell",
-    "tooling": "0.8.3",
+    "tooling": "0.11.3",
     "externals": [],
     "devDependencies": {},
     "scripts": {},
