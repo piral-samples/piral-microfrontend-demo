@@ -15,7 +15,7 @@ export interface ProductPageProps {
 }
 
 export const ProductPage: React.FC<ProductPageProps> = ({ name, history, BasketInfo, BuyButton, Recommendations }) => {
-  const [variant] = product.variants.filter(v => name === v.sku);
+  const [variant] = product.variants.filter((v) => name === v.sku);
 
   return (
     variant && (
@@ -31,7 +31,7 @@ export const ProductPage: React.FC<ProductPageProps> = ({ name, history, BasketI
           {product.name} <small>{variant.name}</small>
         </h2>
         <div id="options">
-          {product.variants.map(variant => (
+          {product.variants.map((variant) => (
             <button
               key={variant.sku}
               className={name === variant.sku ? 'active' : ''}

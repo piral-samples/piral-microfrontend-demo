@@ -7,14 +7,19 @@
   ],
   "devDependencies": {
     "@dbeining/react-atom": "*",
+    "@types/enzyme": "^3.10.8",
+    "@types/jest": "^26.0.23",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@types/react-router": "latest",
     "@types/react-router-dom": "latest",
     "app-shell": "file:../app-shell/dist/emulator/app-shell-1.0.0.tgz",
+    "enzyme": "^3.11.0",
+    "jest": "^26.6.3",
     "piral-cli": "0.12.3",
     "piral-cli-webpack": "0.12.3",
+    "piral-jest-utils": "^0.13.2",
     "react": "*",
     "react-dom": "*",
     "react-router": "*",
@@ -32,6 +37,7 @@
   "scripts": {
     "start": "pilet debug",
     "build": "pilet build",
+    "test": "jest --passWithNoTests",
     "upgrade": "pilet upgrade",
     "upload": "pilet publish --fresh --api-key df133a512569cbc85f69788d1b7ff5a909f6bcfe1c9a2794283a2fc35175882c --url http://localhost:9000/api/v1/pilet"
   },
