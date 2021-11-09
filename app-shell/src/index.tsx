@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { Redirect } from 'react-router-dom';
-import { createPiral, Piral, SetRoute } from 'piral';
+import { createPiral, Piral, SetRedirect } from 'piral';
 import { createContainersApi } from 'piral-containers';
 
 const piral = createPiral({
@@ -10,12 +9,12 @@ const piral = createPiral({
       .then(res => res.json())
       .then(res => res.items);
   },
-  extendApi: [createContainersApi()],
+  plugins: [createContainersApi()],
 });
 
 const app = (
   <Piral instance={piral}>
-    <SetRoute path="/" component={() => <Redirect from="/" to="/products" />} />
+    <SetRedirect from="/" to="/products" />
   </Piral>
 );
 

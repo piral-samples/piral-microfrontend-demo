@@ -2,18 +2,11 @@
 
 trap "trap - SIGTERM && kill -- -$$" SIGINT SIGTERM EXIT
 
-dldir=sample-pilet-service
+npx sample-pilet-service &
 
-if [ ! -d "${dldir}" ]; then
-    git clone https://github.com/smapiot/${dldir}.git ;
-    cd ${dldir} ;
-    npm i && npm run build ;
-else
-    cd ${dldir} ;
-fi
-
-npm start &
-cd ..
+until $(curl --output /dev/null --silent --head --fail http://localhost:9000/api/v1/pilet); do
+  sleep 2
+done
 
 ./publish.sh
 
