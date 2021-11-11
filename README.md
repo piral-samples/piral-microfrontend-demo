@@ -1,6 +1,10 @@
-# piral-microfrontend-demo
+[![Piral Logo](https://github.com/smapiot/piral/raw/develop/docs/assets/logo.png)](https://piral.io)
 
-A demo for a webshop product page using microfrontends with Piral. :rocket:
+# [Piral Sample](https://piral.io) &middot; [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/smapiot/piral/blob/main/LICENSE) [![Gitter Chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/piral-io/community)
+
+> piral-microfrontend-demo
+
+:zap: A demo for microfrontend webshop product page using Piral. :rocket:
 
 **[View the demo online!](https://mife-demo.florian-rappl.de/products)**
 
@@ -53,3 +57,7 @@ For simplicity, you can also just use the following command (required: `install.
 ```
 
 This will clone, install, build, and run a sample feed service. Additionally, everything else will be build, published, and started.
+
+## License
+
+Piral and this sample code is released using the MIT license. For more information see the [license file](./LICENSE).
