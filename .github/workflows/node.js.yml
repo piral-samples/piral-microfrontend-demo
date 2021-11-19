@@ -1,0 +1,39 @@
+name: Publish Demo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install Yarn and gh-pages
+        run: |
+          npm install -g yarn
+          npm install -g gh-pages@3.0.0
+      - name: Install Dependencies
+        run: |
+          cd app-shell
+          npm i
+          cd ..
+      - name: Build Website
+        run: |
+          cd app-shell
+          npx piral build --type release
+          echo "tractor.samples.piral.cloud" > dist/release/CNAME
+          cp dist/release/index.html dist/release/404.html
+          cd ..
+      - name: Deploy Website
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          gh-pages -d "app-shell/dist/release" -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

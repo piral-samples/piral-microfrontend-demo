@@ -8,6 +8,8 @@
 
 **[View the demo online!](https://mife-demo.florian-rappl.de/products)**
 
+You can visit this demo at [tractor.samples.piral.cloud/](https://tractor.samples.piral.cloud/).
+
 ## Prerequisites
 
 For running the code you'll need Node.js with NPM. Nothing else is required.
