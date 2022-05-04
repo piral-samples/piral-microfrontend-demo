@@ -6,8 +6,8 @@
     "piral"
   ],
   "dependencies": {
-    "piral": "0.14.0",
-    "piral-containers": "0.14.0"
+    "piral": "0.14.23",
+    "piral-containers": "0.14.23"
   },
   "scripts": {
     "start": "piral debug",
@@ -30,8 +30,8 @@
     "@types/react-dom": "latest",
     "@types/react-router": "latest",
     "@types/react-router-dom": "latest",
-    "piral-cli": "0.14.0",
-    "piral-cli-webpack": "0.14.0",
+    "piral-cli": "0.14.23",
+    "piral-cli-webpack5": "0.14.23",
     "typescript": "latest"
   }
 }
